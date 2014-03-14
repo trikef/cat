@@ -16,8 +16,8 @@ import org.apache.struts2.interceptor.ServletResponseAware;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.iinur.cat.model.EatModel;
-import com.iinur.cat.data.bean.Eat;
+import com.iinur.cat.data.bean.News;
+import com.iinur.cat.model.NewsModel;
 import com.opensymphony.xwork2.ActionSupport;
 
 @InterceptorRefs({
@@ -37,15 +37,16 @@ public class IndexAction extends ActionSupport implements CookiesAware, ServletR
 
 	public String name;
 	
-	private List<Eat> es;
+	private List<News> ns;
+	
 
-	public List<Eat> getEs() {
-		return es;
+	public List<News> getNs() {
+		return ns;
 	}
 
 
-	public void setEs(List<Eat> es) {
-		this.es = es;
+	public void setNs(List<News> ns) {
+		this.ns = ns;
 	}
 
 
@@ -64,8 +65,8 @@ public class IndexAction extends ActionSupport implements CookiesAware, ServletR
 			log.error(e.getMessage());
 		}
 
-		EatModel emodel = new EatModel();
-		this.es = emodel.get(1);
+		NewsModel nmodel = new NewsModel();
+		this.ns = nmodel.get(1);
 		return SUCCESS;
 	}
 	

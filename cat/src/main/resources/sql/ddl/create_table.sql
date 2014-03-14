@@ -16,8 +16,10 @@ DROP TABLE IF EXISTS cat_weight;
 CREATE TABLE cat_weight(
 	id SERIAL,
 	cat_id INTEGER NOT NULL,
-	gram INTEGER NOT NULL,
+	user_id INTEGER NOT NULL,
+	weight_gram INTEGER NOT NULL,
 	description TEXT,
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY(id)
 );
 
@@ -25,6 +27,7 @@ DROP TABLE IF EXISTS cat_state;
 CREATE TABLE cat_state(
 	id SERIAL,
 	cat_id INTEGER NOT NULL,
+	user_id INTEGER NOT NULL,
 	state_name VARCHAR(200) NOT NULL,
 	val INTEGER,
 	unit VARCHAR(20),

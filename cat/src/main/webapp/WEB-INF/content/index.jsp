@@ -47,7 +47,7 @@
 						        <option value="4">‚æ‚ë‚æ‚ë•à‚­</option>
 						        <option value="3">•à‚­‚ª“|‚ê‚»‚¤</option>
 						        <option value="2">Q‚½‚«‚è</option>
-						        <option value="1">ˆÓŽ¯‚ª–³‚¢</option>
+						        <option value="1">ˆÓŽ¯‚à‚¤‚ë‚¤</option>
 						    </select>
 						</div>
 						<div class="ui-field-contain">
@@ -58,6 +58,15 @@
 						        <option value="40">40g</option>
 						        <option value="30">30g</option>
 						        <option value="20">20g</option>
+						        <option value="19">19g</option>
+						        <option value="18">18g</option>
+						        <option value="17">17g</option>
+						        <option value="16">16g</option>
+						        <option value="15">15g</option>
+						        <option value="14">14g</option>
+						        <option value="13">13g</option>
+						        <option value="12">12g</option>
+						        <option value="11">11g</option>
 						        <option value="10">10g</option>
 						    </select>
 						</div>
@@ -186,7 +195,8 @@
 			<s:if test="state==4">‚æ‚ë‚æ‚ë•à‚­</s:if>
 			<s:if test="state==3">•à‚­‚ª“|‚ê‚»‚¤</s:if>
 			<s:if test="state==2">Q‚½‚«‚è</s:if>
-			<s:if test="state==1">ˆÓŽ¯‚ª–³‚¢</s:if>
+			<s:if test="state==1">ˆÓŽ¯‚à‚¤‚ë‚¤</s:if>
+			<s:if test="val>0"><s:property value="val"/><s:property value="unit"/></s:if>
 			<s:if test="weight_gram>0">‘Ìd:<s:property value="weight_gram"/>g</s:if>
 			<s:if test="state_name!=null"><s:property value="state_name"/></s:if>
 			</strong></p>
